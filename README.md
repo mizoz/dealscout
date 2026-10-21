@@ -1,9 +1,9 @@
 # Deal Scout
 
-**Personal deal intelligence for people who want the weird good stuff before it disappears.**
+**A small command-line tool that scans deal feeds and shop pages, filters out what you don't want, and ranks the rest.**
 
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
-![Tests](https://img.shields.io/badge/tests-pytest-brightgreen)
+[![tests](https://github.com/mizoz/dealscout/actions/workflows/test.yml/badge.svg)](https://github.com/mizoz/dealscout/actions/workflows/test.yml)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 Deal Scout scans local and online deal sources, removes things you do not want,
@@ -77,6 +77,9 @@ deal-scout doctor
 
 ![Markdown report](docs/assets/report-preview.svg)
 
+The preview images and the files in `examples/` are illustrative sample output.
+Real results depend on what the configured sources are listing when you run a scan.
+
 ## Repo Map
 
 ```text
@@ -113,7 +116,18 @@ filter workflow:
 
 Deal Scout stays focused on weekly scouting and shareable ranked digests.
 
+## Tech Stack
+
+- Python 3.11+
+- requests and Beautiful Soup for fetching and parsing
+- PyYAML for profiles
+- pytest, run on every push with GitHub Actions
+
 ## Source Etiquette
 
 This is a polite scanner. Keep source counts low, respect each website's terms,
 and do not run it as a high-frequency scraper.
+
+## License
+
+MIT. Copyright (c) 2026 Ahmed Mahmoud. See [LICENSE](LICENSE).
